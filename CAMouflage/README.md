@@ -8,13 +8,13 @@ A newly launched campaign has been detected targeting multiple users utilizing c
 > 
 - vì event 4688 chỉ ghi lại vài tiến trình hệ thống nên thử tìm kiếm crack trong file $J
 
-![image.png](CAMouflage/image.png)
+![image.png](image.png)
 
 - ghi nhận được user đã tải file Mastercam Full Crack, để biết được thời gian người dùng thực thi file này lần đầu thì tìm trong Prefetch Timeline
 
-![image.png](CAMouflage/image%201.png)
+![image%201.png](image%201.png)
 
-![image.png](CAMouflage/image%202.png)
+![image%202.png](image%202.png)
 
 `2025-06-21 18:34:19`
 
@@ -25,7 +25,7 @@ A newly launched campaign has been detected targeting multiple users utilizing c
     - timestamp của lần chạy gần nhất, nhưng khi process đó kết thúc nó sẽ ghi timestamp đè vào giá trị này.
 - sử dụng Registry và nạp các hive SYSTEM vào
 
-![image.png](CAMouflage/image%203.png)
+![image%203.png](image%203.png)
 
 - ta thấy được S-1-5-21-1403634729-3147206146-238420168-500 là của Administrator
 - thời gian process này kết thúc là `2025-06-21 18:36:52`
@@ -34,7 +34,7 @@ A newly launched campaign has been detected targeting multiple users utilizing c
 > 
 - ta biết Mastercam được khởi chạy lúc 2025-06-21 18:34:19, tìm sau khoảng thời gian đó trong $J có file nào được tạo
 
-![image.png](CAMouflage/image%204.png)
+![image%204.png](image%204.png)
 
 - thấy có file nsv52EF.tmp được tạo rồi bị xóa ngay → đây có thể chỉ là file tạm, không phải file bị drop xuống.
 - timestamp 2025-06-21 18:34:25
@@ -45,11 +45,11 @@ A newly launched campaign has been detected targeting multiple users utilizing c
 > 
 - ghi nhận được rất nhiều file .wp5 được tạo ra
 
-![image.png](CAMouflage/image%205.png)
+![image%205.png](image%205.png)
 
 - các file này cũng được lưu lại trong artifact bài lab đưa, kiểm tra các file thì có file Play.wp5 có 4 byte đầu là MSCF (Microsoft Cabinet), extention thật của file này là .cab
 
-![image.png](CAMouflage/image%206.png)
+![image%206.png](image%206.png)
 
 SHA256: `35efc15a41cf54a51703711e0b117b1899e4698bed1a4fdae638ebb7a3a190e0`
 

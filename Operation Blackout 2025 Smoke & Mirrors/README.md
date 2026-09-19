@@ -13,7 +13,7 @@ Using the exported event logs, your objective is to uncover how the attacker com
 - sysmon 14: RegistryEvent - Key and Value Rename
 - key của LSA Protection nằm ở HKLM\System\CurrentControlSet\Control\Lsa
 
-![image.png](Operation%20Blackout%202025%20Smoke%20&%20Mirrors/image.png)
+![image.png](image.png)
 
 - timestamp: 2025-04-10 06:29:16
 - RunAsPPL thiết lập protection cho LSA
@@ -29,7 +29,7 @@ Using the exported event logs, your objective is to uncover how the attacker com
 - lệnh để cấu hình toàn bộ hoạt động của windows defender là Set-MpPreference, MP là microsoft malware protection.
 - kiểm tra event 4104 trên powershell
 
-![image.png](Operation%20Blackout%202025%20Smoke%20&%20Mirrors/image%201.png)
+![image%201.png](image%201.png)
 
 - timestamp:  2025-04-10 06:31:32
 
@@ -39,7 +39,7 @@ Using the exported event logs, your objective is to uncover how the attacker com
 > 
 - AMSI (Antimalware Scan Interface) là tính năng bảo mật của windows giúp các phần mềm AV đọc được đoạn mã script trước khi nó thực thi.
     
-    ![image.png](Operation%20Blackout%202025%20Smoke%20&%20Mirrors/image%202.png)
+    ![image%202.png](image%202.png)
     
 - timestamp: 2025-04-10 06:37:47
 
@@ -60,7 +60,7 @@ Using the exported event logs, your objective is to uncover how the attacker com
     ```
     
 
-![image.png](Operation%20Blackout%202025%20Smoke%20&%20Mirrors/image%203.png)
+![image%203.png](image%203.png)
 
 - timestamp: 2025-04-10 06:38:35
 - attacker vào safeboot với network nằm né tránh av, EDR, logging.
@@ -71,7 +71,7 @@ Using the exported event logs, your objective is to uncover how the attacker com
 > 
 - timestamp: 2025-04-10 06:38:43
 
-![image.png](Operation%20Blackout%202025%20Smoke%20&%20Mirrors/image%204.png)
+![image%204.png](image%204.png)
 
 `Set-PSReadlineOption -HistorySaveStyle SaveNothing`
 

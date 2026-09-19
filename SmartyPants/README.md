@@ -11,7 +11,7 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 - trong log security không có logon type 10 nên ta sẽ kiểm tra trong log Microsoft-Windows-TerminalServices-RemoteConnectionManager
 - event id 1149 ghi nhận người dùng xác thực thành công
 
-![image.png](SmartyPants/image.png)
+![image.png](image.png)
 
 `2025-01-24 10:15:14`
 
@@ -19,7 +19,7 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 > 
 - kiểm tra Microsoft-Windows-SmartScreen/Debug
 
-![image.png](SmartyPants/image%201.png)
+![image%201.png](image%201.png)
 
 - attacker đã tải các công cụ lần lượt là WinRAR, Everything, MEGAsyncSetup64
 
@@ -38,14 +38,14 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 > *Task 5: The utility was used to search for critical and confidential documents stored on the host, which the attacker could steal and extort the victim. What was the first document that the attacker got their hands on and breached the confidentiality of that document?*
 > 
 
-![image.png](SmartyPants/image%202.png)
+![image%202.png](image%202.png)
 
 `C:\Users\Dutch\Documents\2025- Board of directors Documents\Ministry Of Defense Audit.pdf`
 
 > *Task 6: Find the name and path of second stolen document as well.*
 > 
 
-![image.png](SmartyPants/image%203.png)
+![image%203.png](image%203.png)
 
 `C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDGET-ALLOCATION-CONFIDENTIAL.pdf`
 
@@ -57,7 +57,7 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 > *Task 8: When was this utility executed?*
 > 
 
-![image.png](SmartyPants/image%204.png)
+![image%204.png](image%204.png)
 
 - attacker dùng Everything để tìm kiếm các document, sau đó tải MEGAsync về, bước này chỉ để setup chứ chưa thực sự sử dụng.
 - sau đó attacker mở cmd để thực hiện tạo và collection các document rồi zip lại bằng WinRAR
@@ -66,7 +66,7 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 > *Task 8: The Attacker also proceeded to destroy the data on the host so it is unrecoverable. What utility was used to achieve this?*
 > 
 
-![image.png](SmartyPants/image%205.png)
+![image%205.png](image%205.png)
 
 - Shredder là công cụ để xóa vĩnh viễn dữ liệu khỏi ổ cứng của máy
 - Shrerdder được tải về và tạo thành .lnk để đưa vào Start Menu, điều này sẽ khiến cho mỗi khi mở máy công cụ này sẽ được chạy và xóa toàn bộ dữ liệu.
@@ -76,7 +76,7 @@ Forela's CTO, Dutch, stores important files on a separate Windows system because
 > *Task 9: The attacker cleared 2 important logs, thinking they covered all their tracks. When was the security log cleared?*
 > 
 
-![image.png](SmartyPants/image%206.png)
+![image%206.png](image%206.png)
 
 - attacker đã xóa log của Security và System
 

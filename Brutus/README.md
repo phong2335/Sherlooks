@@ -10,9 +10,9 @@ In this Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs
 > 
 - nhiều invalid user admin từ ip 65.2.161.68 → brute-force
 
-![image.png](Brutus/image.png)
+![image.png](image.png)
 
-![image.png](Brutus/image%201.png)
+![image%201.png](image%201.png)
 
 answer: `65.2.161.68` 
 
@@ -21,7 +21,7 @@ answer: `65.2.161.68`
 
 Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
 
-![image.png](Brutus/image%202.png)
+![image%202.png](image%202.png)
 
 `root`
 
@@ -30,7 +30,7 @@ Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session open
 - auth.log chỉ chỉ ra thời điểm người dùng xác thực thành công, còn wtmp mới chỉ ra thời điểm phiên terminal được khởi tạo cho người dùng SSH.
 - Sử dụng script utpm.py để đọc file nhị phân wtmp, phân tích file log wtmp
     
-    ![image.png](Brutus/image%203.png)
+    ![image%203.png](image%203.png)
     
     - type BOOT_TIME là khởi động hệ thống
 - Thấy nhiều lượt đăng nhập ubuntu và root từ IP 203.101.190.9, đây có lẽ là lượt đăng nhập hợp lệ của admin.
@@ -49,7 +49,7 @@ Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session open
 > 
 - Sau khi login, trình quản lý đăng nhập của hệ thống (systemd-logind) chính thức cấp cho phiên này một mã số
 
-![image.png](Brutus/image%204.png)
+![image%204.png](image%204.png)
 
 - trước đó có accepted session 34 là do công cụ brute-force của attacker mới tìm ra password và đóng kết nối ngay lập tức. Bằng chứng trong wtmp chỉ xuất hiện log từ attacker vào 2024-03-06 06:32:45, tức là session 34.
 - session tiếp theo là 37 do chính attacker đăng nhập để điều khiển hệ thống, attacker đã tạo user và group mới là cyberjunkie, sau đó add user này vào group sudo.

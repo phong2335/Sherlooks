@@ -11,7 +11,7 @@ Forela's Domain environment is pure chaos. Just got another alert from the Domai
 > 
 - ghi nhận event 7036 có 3 log về Volum Shadow Copy
 
-![image.png](CrownJewel-2/image.png)
+![image.png](image.png)
 
 - timestamp gần nhất running là `2024-05-15 05:39:55`
 
@@ -20,7 +20,7 @@ Forela's Domain environment is pure chaos. Just got another alert from the Domai
 - như phân tích ở trên thì ntdsutil vẫn sử dụng vss để trích xuất snapshot nhưng sẽ tạo ra sự kiện ghi file, bài này không cung cấp sysmon log nên sẽ khó khăn hơn trong việc tìm sự kiện ghi file.
 - event 325 (The database engine created a new database) trên application.evtx
 
-![image.png](CrownJewel-2/image%201.png)
+![image%201.png](image%201.png)
 
 - những đường dẫn trên đều là đường dẫn hợp lệ, nhưng ntds.dit sẽ không bao giờ được lưu trong thư mục Temp như vậy cả.
 
@@ -38,7 +38,7 @@ Forela's Domain environment is pure chaos. Just got another alert from the Domai
 - event 326 (The database engine attached a database) → truyền data vào new database.
 - event 327 (The database engine detached a database) → kết thúc tạo và truyền data vào new database.
 
-![image.png](CrownJewel-2/image%202.png)
+![image%202.png](image%202.png)
 
 > *Task 5: Event logs use event sources to track events coming from different sources. Which event source provides database status data like creation and detachment?*
 > 
@@ -49,7 +49,7 @@ Forela's Domain environment is pure chaos. Just got another alert from the Domai
 > 
 - event 4799 (A security-enabled local group membership was enumerated)
 
-![image.png](CrownJewel-2/image%203.png)
+![image%203.png](image%203.png)
 
 `Administrators, Backup Operators`
 
@@ -60,7 +60,7 @@ Forela's Domain environment is pure chaos. Just got another alert from the Domai
 - trong bài này không ghi lại log 4624
 - event 4769 (A Kerberos service ticket was requested) ghi lại sự kiện yêu cầu ticket của dịch vụ Kerberos, từ đây có thể tìm được attacker có tấn công pass-the-ticket không.
 
-![image.png](CrownJewel-2/image%204.png)
+![image%204.png](image%204.png)
 
 - các event trên đều là request của các tài khoản máy mà con người không thể đăng nhập vào tài khoản này, chỉ event cuối là của admin.
 

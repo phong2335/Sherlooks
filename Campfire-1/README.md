@@ -16,11 +16,11 @@ You are provided with:
 > 
 - event 4769 ghi nhận yêu cầu cấp vé kerberos
 
-![image.png](Campfire-1/image.png)
+![image.png](image.png)
 
 - ngoài yêu cầu từ tài khoản alonzo.spire@FORELA.LOCAL tới dịch vụ MSSQLService thì còn lại đều là yêu cầu cục bộ (từ tài khoản máy tới tài khoản máy $)
 
-![image.png](Campfire-1/image%201.png)
+![image%201.png](image%201.png)
 
 `2024-05-21 03:18:09`
 
@@ -38,11 +38,11 @@ You are provided with:
 > 
 - event 4100 ghi nhận không thể thực thi script vào lúc 21/05/2024 03:16:11
 
-![image.png](Campfire-1/image%202.png)
+![image%202.png](image%202.png)
 
 - sau đó attacker đã chạy lệnh powershell -ep bypass để bỏ qua policy và cho phép script chạy được.
 
-![image.png](Campfire-1/image%203.png)
+![image%203.png](image%203.png)
 
 - có thể thấy script này dài tới 20 khối
 
@@ -56,7 +56,7 @@ You are provided with:
 > *Task 6: What is the full path of the tool used to perform the actual kerberoasting attack?*
 > 
 
-![image.png](Campfire-1/image%204.png)
+![image%204.png](image%204.png)
 
 - sau khi chạy file .ps1 để liệt kê các đối tượng AD, cụ thể là tài khoản dịch vụ MSSQLService, attacker sử dụng công cụ Rubeus để gửi các yêu cầu với dịch vụ Kerberos.
 
@@ -65,7 +65,7 @@ You are provided with:
 > *Task 7: When was the tool executed to dump credentials? (UTC)*
 > 
 
-![image.png](Campfire-1/image%205.png)
+![image%205.png](image%205.png)
 
 `2024-05-21 03:18:08`
 

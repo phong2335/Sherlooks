@@ -13,14 +13,14 @@ Talion suspects that the threat actor carried out anti-virtualization checks to 
     - Win32_Service: chứa thông tin về dịch vụ hệ thống
     - Win32_ComputerSystem: chứa thông tin tổng quan về máy tính
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image.png)
+![image.png](image.png)
 
 - attacker dùng `Win32_ComputerSystem` để lấy ra Manufacturer và Model, nếu kết quả có xuất hiện các ký tự như Vmware, ViuturalBox,.. thì mã độc sẽ không chạy nữa.
 
 > *Task 2: Which WMI query did the attacker execute to retrieve the current temperature value of the machine?*
 > 
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image%201.png)
+![image%201.png](image%201.png)
 
 - wmi này để kiểm tra nhiệt độ của máy, nếu là trên các phần mềm ảo hóa thì máy sẽ không giả lập nhiệt độ của phần cứng cho nên nó sẽ trả về null.
 
@@ -29,12 +29,12 @@ Talion suspects that the threat actor carried out anti-virtualization checks to 
 > *Task 3: The attacker loaded a PowerShell script to detect virtualization. What is the function name of the script?*
 > 
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image%202.png)
+![image%202.png](image%202.png)
 
 > *Task 4: Which registry key did the above script query to retrieve service details for virtualization detection?*
 > 
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image%203.png)
+![image%203.png](image%203.png)
 
 `HKLM:\SYSTEM\ControlSet001\Services`
 
@@ -43,13 +43,13 @@ Talion suspects that the threat actor carried out anti-virtualization checks to 
 > *Task 5: The VM detection script can also identify VirtualBox. Which processes is it comparing to determine if the system is running VirtualBox?*
 > 
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image%204.png)
+![image%204.png](image%204.png)
 
 `vboxservice.exe, vboxtray.exe`
 
 > *Task 6: The VM detection script prints any detection with the prefix 'This is a'. Which two virtualization platforms did the script detect?*
 > 
 
-![image.png](Operation%20Blackout%202025%20Phantom%20Check/image%205.png)
+![image%205.png](image%205.png)
 
 `Hyper-V, Vmware`

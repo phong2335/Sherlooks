@@ -11,7 +11,7 @@ The IDS device alerted us to a possible rogue device in the internal Active Dire
 > 
 - Lọc các gói tin theo port của giao thức LLMNR là `5355`
     
-    ![image.png](Noxious/image.png)
+    ![image.png](image.png)
     
 - Máy Forela-Wkstn002 đi hỏi toàn bộ mạng LAN với địa chỉ Multicast là `224.0.0.252` và `ff02::1:3` để xem máy nào có tên miền là DCC01.
 - Ta được biết máy thật trong mạng nội bộ này chỉ có `DC01` thôi, còn `DCC01` là do người dùng gõ sai chính tả.
@@ -28,11 +28,11 @@ The IDS device alerted us to a possible rogue device in the internal Active Dire
     - Acknowledge: server xác nhận lại.
 - Vậy muốn tìm hostname trong bước này thì ta cần lọc trong giao thức DHCP
     
-    ![image.png](Noxious/image%201.png)
+    ![image%201.png](image%201.png)
     
 - Vì ta đã biết ip của attacker là `127.17.79.135` nên tìm trong gói DHCP request
     
-    ![image.png](Noxious/image%202.png)
+    ![image%202.png](image%202.png)
     
 
 `kali` 
@@ -41,7 +41,7 @@ The IDS device alerted us to a possible rogue device in the internal Active Dire
 > 
 - Khi nạn nhân gõ nhầm tên máy chủ thành `DCC01`, mục đích thực sự của họ thường là muốn truy cập vào một thư mục chia sẻ nội bộ qua đường dẫn dạng `\\DCC01\share`. Giao thức chịu trách nhiệm cho việc chia sẻ file trong Windows chính là SMB.
     
-    ![image.png](Noxious/image%203.png)
+    ![image%203.png](image%203.png)
     
 - Các gói tin trên là quá trình xác thực của giao thức NTLMSSP (NT LAN Manager Security Support Provider) là giao thức xác thực thách thức-phản hồi của Microsoft, dùng để bảo mật đăng nhập và truyền dữ liệu trong hệ thống Windows.
 - Kẻ tấn công đã lừa máy nạn nhân tin rằng máy của hắn là một máy chủ chia sẻ file (SMB). Khi máy nạn nhân cố gắng kết nối, nó tự động gửi thông tin đăng nhập (mật khẩu đã băm) cho kẻ tấn công.
@@ -103,9 +103,9 @@ following `hashcat.exe -a0 -m5600 hashfile.txt rockyouwordlist.txt`
     ```
     
 
-![image.png](Noxious/cbaeb445-af25-43bb-9b1e-8de5bc7eb2bc.png)
+![cbaeb445-af25-43bb-9b1e-8de5bc7eb2bc.png](cbaeb445-af25-43bb-9b1e-8de5bc7eb2bc.png)
 
-![image.png](Noxious/image%204.png)
+![image%204.png](image%204.png)
 
 `NotMyPassword0k?` 
 
@@ -114,6 +114,6 @@ following `hashcat.exe -a0 -m5600 hashfile.txt rockyouwordlist.txt`
 - Lọc ra giao thức smb và ta sẽ tìm thấy gói tin Tree Connect Request và Tree Connect Response, đây là 2 gói tin yêu cầu và chấp thuận của SMB khi người dùng muốn truy cập vào file share.
 - 2 gói tin này sẽ chứa đường dẫn đầy đủ của file share mà người dùng muốn truy cập vào.
 
-![image.png](Noxious/image%205.png)
+![image%205.png](image%205.png)
 
 `\\DC01\DC-Confidential`

@@ -7,18 +7,18 @@ Your email address has been leaked and you receive an email from Paypal in Germa
 > *Task 1: What is the return path of the email?*
 > 
 
-![image.png](Phishing_Email/image.png)
+![image.png](image.png)
 
 - nhìn qua email thấy địa chỉ người gửi là PAYPAL.com nhưng trong địa chỉ email thực tế lại là IHKH0MFEWW@kodehexa.net
 
-![image.png](Phishing_Email/image%201.png)
+![image%201.png](image%201.png)
 
 `<bounce@rjttznyzjjzydnillquh.designclub.uk.com>`
 
 > *Task 2: What is the domain name of the url in this mail?*
 > 
 
-![image.png](Phishing_Email/image%202.png)
+![image%202.png](image%202.png)
 
 `storage.googleapis.com`
 

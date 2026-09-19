@@ -11,7 +11,7 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 - thử tìm các gói dns và llmnr nhưng đều không tìm thấy ip của *Forela-Wkstn001*
 - tìm với giao thức nbns
 
-![image.png](Reaper/image.png)
+![image.png](image.png)
 
 - ngoài các gói query và response như dns và llmnr thì nbns có thêm các gói registration và refresh để đăng ký và làm mới tên miền mà máy đó sử dụng trong hệ thống mạng.
 - gói tin 3 là gói máy 172.17.79.129 muốn làm mới tên *Forela-Wkstn001*
@@ -22,7 +22,7 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 > 
 - tương tự task 1
 
-![image.png](Reaper/image%201.png)
+![image%201.png](image%201.png)
 
 `172.17.79.136`
 
@@ -31,12 +31,12 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 - kiểm tra event 4624 thì thấy ngoài sự đăng nhập của các dịch vụ thì có sự đăng nhập thành công bằng dịch vụ ntlm.
 - 31/07/2024 04:55:16
 
-![image.png](Reaper/image%202.png)
+![image%202.png](image%202.png)
 
 - source ip là 172.17.79.135 với hostname là FORELA-WKSTN002, nhưng ở trên ta đã biết ip của FORELA-WKSTN002 là 172.17.79.136 → đây chắc chắn là một thiết bị khác cố tình giả danh máy FORELA-WKSTN002. Logon type 3 đăng nhập qua network, có thể là qua dịch vụ smb.
 - filter lưu lượng smb để xem ip này có truy cập vào file share nào không
 
-![image.png](Reaper/image%203.png)
+![image%203.png](image%203.png)
 
 `arthur.kyle`
 
@@ -49,7 +49,7 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 > 
 - ta biết máy vitim là FORELA-WKSTN002 với ip là 172.17.79.136
 
-![image.png](Reaper/image%204.png)
+![image%204.png](image%204.png)
 
 `\\DC01\Trip` 
 
@@ -57,7 +57,7 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 > 
 - xem lại log 4624
 
-![image.png](Reaper/image%205.png)
+![image%205.png](image%205.png)
 
 `40252`
 
@@ -80,7 +80,7 @@ Our SIEM alerted us to a suspicious logon event which needs to be looked at imme
 > 
 - event 5140 ghi nhận một đối tượng share được truy cập.
 
-![image.png](Reaper/image%206.png)
+![image%206.png](image%206.png)
 
 `\\*\IPC$`
 

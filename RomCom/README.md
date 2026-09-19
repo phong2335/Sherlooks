@@ -22,23 +22,23 @@ Susan works at the Research Lab in Forela International Hospital. A Microsoft De
 > 
 - kiểm tra tệp $MFT
 
-![image.png](RomCom/image.png)
+![image.png](image.png)
 
 `Pathology-Department-Research-Records.rar`
 
 > *Task 4: When was the archive file created on the disk?*
 > 
 
-![image.png](RomCom/image%201.png)
+![image%201.png](image%201.png)
 
 `2025-09-02 08:13:50`
 
 > *Task 5: When was the archive file opened?*
 > 
 
-![image.png](RomCom/image%202.png)
+![image%202.png](image%202.png)
 
-![image.png](RomCom/image%203.png)
+![image%203.png](image%203.png)
 
 - x10 thuộc $STANDARD_INFORMATION, nghĩa là thời gian hiện tại trong metadata, metadata có thể bị thay đổi liên tục.
 - x30 thuộc $FILE_NAME, là thời gian kernel ghi xuống mft khi sự kiện file xảy ra và khó bị thay đổi hơn.
@@ -53,7 +53,7 @@ Susan works at the Research Lab in Forela International Hospital. A Microsoft De
 - attacker cũng tạo một file hợp lệ nằm trong cùng folder với archive file, nhằm làm sao nhãng sự chú ý của người dùng tới file này và coi như archive file này là hoàn toàn bình thường
 - path archive file là susan\document và thấy một file .pdf ngay sau thời gian archive file .rar được khởi tạo
 
-![image.png](RomCom/image%204.png)
+![image%204.png](image%204.png)
 
 `Genotyping_Results_B57_Positive.pdf`
 
@@ -61,14 +61,14 @@ Susan works at the Research Lab in Forela International Hospital. A Microsoft De
 > 
 - file này sẽ không thể nằm cùng folder với .rar nên ta sẽ tìm các file nghi vấn như .lnk, .exe sau thời gian file Genotyping_Results_B57_Positive.pdf được tạo
 
-![image.png](RomCom/image%205.png)
+![image%205.png](image%205.png)
 
 `C:\Users\Susan\Appdata\Local\ApbxHelper.exe`
 
 > *Task 8: The exploit also drops a file to facilitate the persistence and execution of the backdoor. What is the path and name of this file?*
 > 
 
-![image.png](RomCom/image%206.png)
+![image%206.png](image%206.png)
 
 - ngay trên đó là một file shortcut .lnk được tạo trong thư mục Startup, có thể tệp shortcut này link đến ApbxHelper.exe. Mỗi khi user khởi động máy thì tệp .lnk này sẽ link đến ApbxHelper.exe
 - 2 file này xảy ra cùng một giây, người dùng bình thường không thể tạo 2 file khác nhau trong cùng một giây như vậy được, mà chỉ có thể do WinRar.exe tạo ra 2 file đó.
@@ -86,6 +86,6 @@ Persistence - Boot or Logon Autostart Execution: Shortcut Modification.
 > 
 - tương tự task 5
 
-![image.png](RomCom/image%207.png)
+![image%207.png](image%207.png)
 
 `2025-09-02 08:15:05`

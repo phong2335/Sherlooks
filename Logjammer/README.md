@@ -8,7 +8,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 > 
 - event 4624
 
-![image.png](Logjammer/image.png)
+![image.png](image.png)
 
 `27/03/2023 14:37:09`
 
@@ -21,7 +21,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
     - event id 2033: tất cả các rules đã bị xóa
 - tìm trong event 2004 với user id là S-1-5-21-3393683511-3463148672-371912004-1001 của user cyberjunkie trong task 1.
 
-![image.png](Logjammer/image%201.png)
+![image%201.png](image%201.png)
 
 - mmc.exe (microsoft managerment console) là một công cụ quản trị hệ thống được tích hợp sẵn trong hệ điều hành windows, nó cung cấp giao diện đồ họa cho các công cụ quản trị như Windows Defender Firewall with Advanced Security hoặc Event Viewer.
 
@@ -39,7 +39,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 - event 4719 ghi nhận audit policy bị thay đổi
 - 27/03/2023 14:50:03
 
-![image.png](Logjammer/image%202.png)
+![image%202.png](image%202.png)
 
 - Security ID và Account Name cho thấy đây là hệ thống tự thực hiện, có thể attacker đã chạy công cụ khiến cho SYSTEM tự thực hiện hành động thay đổi audit policy.
 - Subcategory: `Other Object Access Events`
@@ -49,7 +49,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 - event 4698 ghi nhận schedule task được tạo với Task Name là `HTB-AUTOMATION`
 - timestamp: 27/03/2023 14:51:21
 
-![image.png](Logjammer/image%203.png)
+![image%203.png](image%203.png)
 
 ```jsx
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
@@ -127,9 +127,9 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 - kiểm tra event 1116
 - 27/03/2023 14:42:34
 
-![image.png](Logjammer/image%204.png)
+![image%204.png](image%204.png)
 
-![image.png](Logjammer/image%205.png)
+![image%205.png](image%205.png)
 
 - Name: HackTool:MSIL/SharpHound!MSR
     - HackTool: phân loại đây là công cụ hack
@@ -142,9 +142,9 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 > *Task 9: Whats the full path of the malware which raised the alert?*
 > 
 
-![image.png](Logjammer/image%206.png)
+![image%206.png](image%206.png)
 
-![image.png](Logjammer/image%207.png)
+![image%207.png](image%207.png)
 
 - vẫn trong event ở trên thì ta thấy được file này được tải về từ user cyberjunkie trên Internet.
 - containerfile là thư mục cha chứa file này là tệp .zip
@@ -154,7 +154,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 > *Task 10: What action was taken by the antivirus?*
 > 
 
-![image.png](Logjammer/image%208.png)
+![image%208.png](image%208.png)
 
 - timestamp: 27/03/2023 14:42:48
 - Acction: `Quarantine` → AV đã cách ly thành công malware này.
@@ -164,7 +164,7 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 - event 4104 ghi lại toàn bộ khối lệnh được thực thi trên powershell, kể cả đoạn mã bên trong một script.
 - 27/03/2023 14:58:33
 
-![image.png](Logjammer/image%209.png)
+![image%209.png](image%209.png)
 
 - đây là lệnh tính ra md5 của file .ps1
 
@@ -174,11 +174,11 @@ You have been presented with the opportunity to work as a junior DFIR consultant
 > 
 - event 1102 trên security log ghi lại người xóa.
 
-![image.png](Logjammer/image%2010.png)
+![image%2010.png](image%2010.png)
 
 - event 104 của system log ghi lại Log Name.
 
-![image.png](Logjammer/image%2011.png)
+![image%2011.png](image%2011.png)
 
 `Microsoft-Windows-Windows Firewall With Advanced Security/Firewall` 
 

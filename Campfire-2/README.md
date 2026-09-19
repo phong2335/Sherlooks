@@ -11,7 +11,7 @@ Forela's Network is constantly under attack. The security system raised an alert
 > 
 - filter event 4768 và chỉ có duy nhất một event không phải đến từ tài khoản nội bộ (::1)
 
-![image.png](Campfire-2/image.png)
+![image.png](image.png)
 
 - log trên cũng cho thấy Pre-Authentication Type: 0
 
@@ -37,7 +37,7 @@ Forela's Network is constantly under attack. The security system raised an alert
 - yêu cầu của task 5 là tìm ra tài khoản chính xác của máy trạm 172.17.79.129 đã gửi yêu cầu giả mạo người dùng arthur.kyle
 - event 4769 có máy 172.17.79.129 yêu cầu vé tgs.
 
-![image.png](Campfire-2/image%201.png)
+![image%201.png](image%201.png)
 
 | Event ID | Event Name | Description |
 | --- | --- | --- |

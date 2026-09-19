@@ -7,7 +7,7 @@ In this Sherlock, you will become acquainted with MFT (Master File Table) forens
 > *Task 1: Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?*
 > 
 
-![image.png](BFT/image.png)
+![image.png](image.png)
 
 - `Stage-20240213T093324Z-001.zip` nằm trong thư mục Downloads của user, mã số trên file là thời gian 20240213.
 
@@ -15,9 +15,9 @@ In this Sherlock, you will become acquainted with MFT (Master File Table) forens
 > 
 - mọi file được tải về từ internet đều ghi nhận thêm một file có luồng phụ là :Zone.Identifier
 
-![image.png](BFT/image%201.png)
+![image%201.png](image%201.png)
 
-![image.png](BFT/image%202.png)
+![image%202.png](image%202.png)
 
 - ZoneId = 0 (My computer): file nằm sẵn trên máy
 - ZoneId = 1 (Intranet): từ mạng nội bộ
@@ -31,7 +31,7 @@ In this Sherlock, you will become acquainted with MFT (Master File Table) forens
 > 
 - Stage-20240213T093324Z-001.zip → invoice.zip → invoice.bat
 
-![image.png](BFT/image%203.png)
+![image%203.png](image%203.png)
 
 `C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat`
 
@@ -45,7 +45,7 @@ In this Sherlock, you will become acquainted with MFT (Master File Table) forens
 - offset number = entry number x 1024
 - vì mỗi bản ghi ứng với một entry number = 1024 bytes
 
-![image.png](BFT/image%204.png)
+![image%204.png](image%204.png)
 
 - 2346 x 1024 = 23.998.464
 
@@ -57,6 +57,6 @@ In this Sherlock, you will become acquainted with MFT (Master File Table) forens
 - mở file $MFT bằng hex editor
 - đi tới offset 16E3000
 
-![image.png](BFT/image%205.png)
+![image%205.png](image%205.png)
 
 `43.204.110.203:6666`

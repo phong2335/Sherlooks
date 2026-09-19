@@ -12,13 +12,13 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 > *Task 2: Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim's system?*
 > 
 
-![image.png](Unit42/image.png)
+![image.png](image.png)
 
 - phát hiện Preventivo24.02.14.exe.exe đặt tên 2 lần .exe và tên gốc của nó là Fattura 2 2024.exe
 - kiểm tra hash của file trên virus total thì nó là một malware Trojan.
 - process 10672 đã tạo ra msiexec.exe, msiexec.exe là công cụ hợp pháp của windows để cài đặt các bản cập nhật của windows.
 
-![image.png](Unit42/image%201.png)
+![image%201.png](image%201.png)
 
 - lợi dụng msiexec.exe để chạy main1.msi
 
@@ -29,7 +29,7 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 - event 11 ghi nhận tải file `Preventivo24.02.14.exe.exe` vào lúc 2024-02-14 03:41:26 từ trình duyệt firefox.
 - kiểm tra event 22 ghi nhận query tải file trực tiếp từ dropbox, dropbox là dịch vụ lưu trữ cloud dùng để lưu trữ, tải, chia sẻ tài liệu.
 
-![image.png](Unit42/image%202.png)
+![image%202.png](image%202.png)
 
 `dropbox` 
 
@@ -37,7 +37,7 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 > 
 - sysmon 2 ghi nhận Preventivo24.02.14.exe.exe thay đổi time của file ~.pdf
 
-![image.png](Unit42/image%203.png)
+![image%203.png](image%203.png)
 
 `2024-01-14 08:10:06`
 
@@ -51,11 +51,11 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 > 
 - sysmon 3 ghi nhận có kết nối mạng từ Preventivo24.02.14.exe.exe tới 93.184.216.34
 
-![image.png](Unit42/image%204.png)
+![image%204.png](image%204.png)
 
 - sysmon 22 ghi nhận kết nối tới [www.example.com](http://www.example.com) vào đúng thời gian kết nối mạng ở trên.
 
-![image.png](Unit42/image%205.png)
+![image%205.png](image%205.png)
 
 `www.example.com` 
 
@@ -68,7 +68,7 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 > 
 - sysmon 5 ghi nhận process terminated
 
-![image.png](Unit42/image%206.png)
+![image%206.png](image%206.png)
 
 `2024-02-14 03:41:58`
 
@@ -78,7 +78,7 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
 
 - vào khoảng 2024-02-14 03:41:25.269 user CyberJunkie truy cập vào firefox từ máy DESKTOP-887GK2L và tải mã độc từ domain uc2f030016253ec53f4953980a4e.dl.dropboxusercontent.com, trang này thường là trang download của dropbox
 
-![image.png](Unit42/image%207.png)
+![image%207.png](image%207.png)
 
 - 2024-02-14 03:41:26
     
@@ -108,7 +108,7 @@ In this Sherlock, you will familiarize yourself with Sysmon logs and various use
     - QueryName: www.example.com
 - sau đó sysmon 2 ghi nhận Preventivo24.02.14.exe.exe đổi thời gian tạo của hàng loạt các file về 1 tháng trước
 
-![image.png](Unit42/image%208.png)
+![image%208.png](image%208.png)
 
 - ghi nhận msiexec.exe và Preventivo24.02.14.exe.exe tải hàng loạt các file
     

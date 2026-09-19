@@ -12,7 +12,7 @@ Forela's domain controller is under attack. The Domain Administrator account is 
 > 
 - kiểm tra event 7036 (Provider: Service Control Manger) trên system log, ghi nhận Volume Shadow Copy service chuyển trạng thái running.
 
-![image.png](CrownJewel-1/image.png)
+![image.png](image.png)
 
 `2024-05-14 03:42:16`
 
@@ -23,9 +23,9 @@ Forela's domain controller is under attack. The Domain Administrator account is 
 - 2 group mặc định có quyền cao nhất trên một máy windows luôn là Administrators và Backup Operators.
 - kiểm tra event 4799 (A security-enabled local group membership was enumerated) ghi nhận danh sách members của một nhóm bảo mật local trên máy tính vừa được liệt kê.
 
-![image.png](CrownJewel-1/image%201.png)
+![image%201.png](image%201.png)
 
-![image.png](CrownJewel-1/image%202.png)
+![image%202.png](image%202.png)
 
 - ghi nhận được 2 group là BUILTIN\Administrators và Backup Operators với machine account là DC01$
 
@@ -42,7 +42,7 @@ Forela's domain controller is under attack. The Domain Administrator account is 
 - khi vss chụp được một shadow copy thì nó chỉ là khối dữ liệu thô nằm ẩn trong ổ cứng, để có thể truy cập thì nó sẽ được mount vào thành một đường dẫn cụ thể.
 - kiểm tra event 4 trong Microsoft-Windows-Ntfs/Operational ghi nhận một volme NTFS được mount thành công.
 
-![image.png](CrownJewel-1/image%203.png)
+![image%203.png](image%203.png)
 
 `{06c4a997-cca8-11ed-a90f-000c295644f9}`
 
@@ -50,7 +50,7 @@ Forela's domain controller is under attack. The Domain Administrator account is 
 > 
 - kiểm tra trên $MFT thì thấy 4 file là ntds.dit
 
-![image.png](CrownJewel-1/image%204.png)
+![image%204.png](image%204.png)
 
 - file đầu được lưu trong \Windows\NTDS là file gốc của hệ thống
 - file 2 và 3 được lưu trong \Windows\WinSxS là nơi lưu giữ cách dịch vụ dự phòng hợp pháp của windows.
@@ -63,7 +63,7 @@ Forela's domain controller is under attack. The Domain Administrator account is 
 > *Task 6: When was newly dumped ntds.dit created on disk?*
 > 
 
-![image.png](CrownJewel-1/image%205.png)
+![image%205.png](image%205.png)
 
 `2024-05-14 03:44:22`
 
@@ -80,7 +80,7 @@ Forela's domain controller is under attack. The Domain Administrator account is 
     - HKEY_CURRENT_USER: C:\Users\<Tên_User>\**NTUSER.DAT**
 - tìm kiếm path chứa ntds.dit copy ở task 6, trong đó có chứa file SYSTEM.
 
-![image.png](CrownJewel-1/image%206.png)
+![image%206.png](image%206.png)
 
 #### Mapping Mitre
 
